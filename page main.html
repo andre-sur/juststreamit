@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Mon projet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+    <h1 class="left-align-title">Meilleur film :</h1>
+    <div class="movie-container">
+        <!-- Conteneur pour afficher le meilleur film -->
+        <div id="best-film">
+            
+        </div>
+        <div id="film-description">
+        </div>
+    </div>
+    <p class="left-align-title">Drama</p>
+
+    <div id="movies-genre" class="movie-grid"></div>
+    <p>     </p>
+    <button id="toggleButton">Voir plus</button>
+    
+    <p class="left-align-title">Horror</p>
+
+    <div id="movies-genre2" class="movie-grid"></div>
+    <button id="toggleButton">Voir plus</button>
+
+   
+
+    <h2>Films du genre sélectionné</h2>
+    <label for="genre-select">Choisissez un genre :</label>
+    <select id="genre-select">
+        
+    </select>
+    <p class="left-align-title"><span id="selected-genre">Aucun</span></p>
+
+    <div id="genre-selection" class="movie-grid"></div>
+    <button id="toggleButton">Voir plus</button>
+    
+
+
+    <script src="app.js"></script>
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', async function() {
+        console.log("App.js est bien chargé et exécuté !");
+            
+        try {
+           
+            const bestFilmInfo = await getBestFilm(50); // Récupérer le meilleur film
+            updateFilmDescription(bestFilmInfo); // Ajouter la description du film
+    
+             // Afficher les films du genre "Horror" dès le début
+            await displayMoviesGenre(50, "Drama", "movies-genre");
+            await displayMoviesGenre(50, "Horror", "movies-genre2");
+
+            // Récupérer les genres et créer le menu déroulant
+            const genres = await fetchAllGenres(5);
+            console.log("ailleurs");
+            createDropdownMenu(genres); // Créer le menu avec les genres
+    
+    
+        } catch (error) {
+            console.log("Une erreur est survenue lors de l'initialisation :");
+            console.error(error);
+        }
+    
+        const genreSelect = document.getElementById('genre-select');
+        genreSelect.addEventListener('change', async function() {
+        const selectedGenre = genreSelect.value;
+        document.getElementById('selected-genre').textContent = selectedGenre || 'Aucun';
+
+        // Afficher les films du genre sélectionné
+        if (selectedGenre && selectedGenre !== 'Aucun') {
+            await displayMoviesGenre(50, selectedGenre, 'genre-selection');
+        
+       // document.getElementById('toggleButton').addEventListener('click', click_viewmore(500, "Horror", "movies-genre"));
+    }
+    });
+});
+    </script>
+
+</body>
+</html>
+        
