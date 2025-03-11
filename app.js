@@ -64,7 +64,6 @@ async function showDetails(urlimage,url){
     };
     
 
-
 function updateFilmDescription(film)
  {
     if (!film || !film.url) {
@@ -112,7 +111,7 @@ async function fetchAllFilms(totalPages) {
 
 async function getBestFilm(number) {
     const allFilms = await fetchAllFilms(number);
-    console.log("tous les film que il a trouvez",allFilms)
+    console.log("tous les films trouvés",allFilms)
     if (allFilms.length === 0) return null;  
 
     const bestFilm = allFilms.reduce((bestFilm, currentFilm) => {
@@ -255,7 +254,6 @@ async function displayMoviesGenre(page, genre, balise) {
         movieElement.innerHTML = movieHtml;
         moviesList.appendChild(movieElement);
     
-        
     });
 }
 
@@ -288,7 +286,6 @@ function click_viewmore () {
         toggleButton.textContent = "Voir plus"; // Revenir au texte initial
     }
 }
-
 
 // Attacher l'événement de clic au bouton
 document.getElementById('toggleButton').addEventListener('click', click_viewmore);

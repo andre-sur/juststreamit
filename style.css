@@ -19,7 +19,7 @@ p {
 }
 
 .movie-grid div {
-    width: 100%; /* S'assurer que les éléments prennent toute la largeur de leur colonne */
+    width: 100%; 
 }
 #genre-select {
     padding: 10px;
@@ -39,16 +39,16 @@ p {
     display: none;
 }
 .left-align-title {
-    text-align: left; /* Aligne le texte à gauche */
-    font-family: 'Arial Narrow', sans-serif; /* Change la police de caractères */
-    font-size: 32px; /* Ajuste la taille de la police si nécessaire */
-    font-weight: bold; /* Met le texte en gras */
-    color: #333; /* Change la couleur du texte si besoin */
-    margin: 0; /* Enlève la marge par défaut */
-    padding: 10px 0; /* Ajoute un peu d'espace autour du texte */
+    text-align: left; 
+    font-family: 'Arial Narrow', sans-serif;  
+    font-size: 32px; 
+    font-weight: bold; 
+    color: #333; 
+    margin: 0; 
+    padding: 10px 0; 
 }
 .movie-container {
-    display: flex; /* Utiliser flexbox pour afficher l'image et la description côte à côte */
+    display: flex;
     
     align-items: center;
     padding: 3px;
@@ -58,9 +58,9 @@ p {
     margin : 3px;
     width: 50%;
     justify-content: flex-start;
-    border: 2px solid #100f0f; /* Bordure pour bien délimiter les sections */
-    border-radius: 3px; /* Bords arrondis */
-    box-shadow: 0px 4px 6px rgba(13, 4, 4, 0.1); /* Ombre pour un effet d'élévation */
+    border: 2px solid #100f0f; 
+    border-radius: 3px; 
+    box-shadow: 0px 4px 6px rgba(13, 4, 4, 0.1);
 }
 
 .movie-container::after {
@@ -69,29 +69,29 @@ p {
     clear: both;
 }
 #best-film img{
-    display: flex; /* Utiliser flexbox dans ce conteneur pour aligner l'image et le texte horizontalement */
-    align-items: center; /* Centrer erticalement l'image et le texte */
-    width: 100%; /* Prendre 40% de la largeur totale */
-    margin-right: 10px; /* Ajouter un espace entre l'image et la description */
+    display: flex; 
+    align-items: center; 
+    width: 100%; 
+    margin-right: 10px; 
     height: auto;
     border-radius: 3px;
 }
 .film-title {
-    font-size: 28px; /* Taille du titre du film */
+    font-size: 28px; 
     font-family: Arial Narrow, sans-serif;
-    font-weight: bold; /* Mettre en gras le titre */
-    text-align: left; /* Aligné à gauche */
-    margin: 0; /* Enlever la marge par défaut du titre */
-    padding-bottom: 10px; /* Positionne le titre tout à gauche */
+    font-weight: bold;
+    text-align: left; 
+    margin: 0; 
+    padding-bottom: 10px; 
 }
 #film-description {
-    width: 100%; /* La description prend toute la largeur du conteneur */
+    width: 100%; 
     padding: 10px;
-    text-align: left; /* Aligner le texte à gauche */
-    font-family: Arial Narrow, sans-serif; /* Changer la police (tu peux utiliser d'autres polices) */
-    font-size: 20px; /* Taille de la police, ajustable */
-    color: #0c0c0c; /* Couleur du texte */
-    background-color: #f9f9f9; /* Optionnel : couleur de fond légère */
+    text-align: left; 
+    font-family: Arial Narrow, sans-serif; 
+    font-size: 20px; 
+    color: #0c0c0c; 
+    background-color: #ebd8d8; 
 }
 
 
@@ -104,21 +104,21 @@ p {
 
 
 .image-button {
-    position: absolute;  /* Positionne l'élément de manière absolue par rapport à son parent */
-    bottom: 20px;        /* Positionne le bouton à 10px du bas */
-    right: 20px;         /* Positionne le bouton à 10px de la droite */
+    position: absolute;
+    bottom: 20px;        
+    right: 20px;         
     padding: 10px 20px;
     background-color: #800812;
     color: white;
-    border: 1px solid #fff;  /* Ajout d'un bord (manquait la couleur) */
+    border: 1px solid #fff;  
     border-radius: 5px;
     cursor: pointer;
 }
 .genre-label {
     font-weight: bold;
     font-size: 25px;
-    color: #03101e;  /* Une couleur sombre */
-    padding-right: 10px;  /* Un peu d'espace à droite */
+    color: #03101e; 
+    padding-right: 10px;  
 }
 .image-button:hover {
     background-color: #0056b3;
@@ -127,27 +127,27 @@ p {
 /* Grille pour afficher les films */
 .movie-grid {
     display: grid;
-    grid-template-columns: 1fr;  /* 3 colonnes */
-    gap: 5px;  /* Aucun espace entre les éléments */
-    padding: 5px;  /* Pas de padding dans la grille */
+    grid-template-columns: 1fr;  
+    gap: 5px;  
+    padding: 5px;  
     margin: 25px;
     width: 50%;
 }
 .movie-grid div {
-    margin: 5;  /* Supprimer les marges entre les éléments */
+    margin: 5;  
     border: none;
 }
 @media (min-width: 768px) and (max-width: 1023px) {
     .movie-grid {
-        grid-template-columns: repeat(2, 1fr);  /* 2 colonnes */
+        grid-template-columns: repeat(2, 1fr);  
     }
 }
 
 @media (min-width: 1024px) {
     .movie-grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);  /* 3 colonnes */
-        gap: 10;  /* Aucun espace entre les colonnes et les lignes */
+        grid-template-columns: repeat(3, 1fr);  
+        gap: 10;  
         padding: 10;
         margin : 10;
         border: none;
@@ -167,8 +167,8 @@ p {
     width: 100%;
     height: 200px;
     margin : 0;
-    object-fit: cover; /* Garde les proportions de l'image */
-    border-radius: 5px; /* Un peu d'arrondi sur les coins de l'image */
+    object-fit: cover; 
+    border-radius: 5px;
 }
 
 /* Conteneur pour le titre et le bouton, positionné sur l'image */
@@ -178,7 +178,7 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Légère superposition noire pour lisibilité */
+    background: rgba(0, 0, 0, 0.5);
     color: white;
     display: flex;
     flex-direction: column;
@@ -186,12 +186,12 @@ p {
     align-items: center;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
-    border-radius: 10px; /* Pour les bords arrondis également sur l'overlay */
+    border-radius: 10px; 
 }
 
-/* Effet au survol (lorsque la souris passe sur l'image) */
+/* Effet au survol */
 .movie-container:hover .movie-overlay {
-    opacity: 1; /* Affiche l'overlay quand l'image est survolée */
+    opacity: 1; 
 }
 
 
@@ -205,7 +205,7 @@ p {
 
 /* Bouton "Détail" */
 .movie-detail-btn {
-    background-color: #989ea4; /* Couleur d'un bouton visible */
+    background-color: #989ea4; 
     color: rgb(12, 10, 10);
     border: none;
     padding: 10px 20px;
@@ -213,8 +213,8 @@ p {
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-    position: absolute; /* Positionner le bouton de manière absolue */
-    bottom: 10px; /* Placer le bouton à 10px du bas */
+    position: absolute; 
+    bottom: 10px; 
     right: 10px;
 }
 
@@ -224,27 +224,27 @@ p {
 }
 
 .popup {
-    width: 80vw; /* 80% de la largeur de la fenêtre */
-    height: 60vh; /* 60% de la hauteur de la fenêtre */
-    max-width: 600px; /* Limite la largeur à 600px */
-    max-height: 400px; /* Limite la hauteur à 400px */
-    margin: 0 auto; /* Centrer la pop-up horizontalement */
-    position: fixed; /* Positionnement fixe sur l'écran */
-    top: 50%; /* Positionne la pop-up verticalement au centre de l'écran */
+    width: 80vw; 
+    height: 60vh; 
+    max-width: 600px; 
+    max-height: 400px; 
+    margin: 0 auto; 
+    position: fixed; 
+    top: 50%; 
     left: 50%;
-    transform: translate(-50%, -50%); /* Centrage exact de la pop-up */
+    transform: translate(-50%, -50%); 
     background-color: white;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
-    overflow-y: auto; /* Ajoute l'ascenseur vertical si le contenu dépasse */
+    overflow-y: auto; 
 }
 
 @media (max-width: 768px) {
     .popup {
-        width: 90vw; /* 90% de la largeur de la fenêtre sur les petits écrans */
-        height: 50vh; /* 50% de la hauteur sur les petits écrans */
+        width: 90vw; 
+        height: 50vh; 
     }
 }
 
