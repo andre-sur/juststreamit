@@ -28,7 +28,7 @@ async function showDetails(urlimage,url){
         const popupContent = document.createElement('div');
         popupContent.classList.add('popup-content');
         
-        // X de fermeture de la pop-up
+        // fermeture
         const closeButton = document.createElement('span');
         closeButton.classList.add('close');
         closeButton.innerHTML = '&times;'; 
@@ -66,19 +66,20 @@ async function showDetails(urlimage,url){
 
 function updateFilmDescription(film)
  {
+    //test si tout ok
     if (!film || !film.url) {
         console.error("Film ou URL manquant...URL=", film.title);
         return;
     }
     fetchDescriptionFromPage(film.url)
-        .then(long_description => {
+        .then(description => {
             const descriptionElement = document.getElementById("film-description");
             descriptionElement.innerHTML=`
         <h3 class="film-title">${film.title}</h3>
        <p>             </p>
        <p>             </p>
-        <p>${long_description}</p>
-        <button class="image-button" onclick="showDetails('${movie.image_url}','${movie.url}')">Détails</button>
+        <p>${description}</p>
+        <button class="image-button" onclick="showDetails('${film.image_url}','${film.url}')">Détails</button>
         
     `;
           
